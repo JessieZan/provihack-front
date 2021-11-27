@@ -1,0 +1,11 @@
+.container-signup form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.btn-signup {
+  border: 1px solid black;
+  padding: 6px;
+  border-radius: 5px;
+  align-self: center;
+}
