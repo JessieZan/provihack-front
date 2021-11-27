@@ -1,0 +1,38 @@
+.body_welcome {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header-welcome,
+.footer-welcome,
+.principal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid red;
+  align-items: center;
+}
+
+.principal {
+  flex-grow: 1;
+  justify-content: space-evenly;
+}
+
+.header-welcome,
+.footer-welcome {
+  height: 14.3rem;
+}
+
+.btn-signin,
+.btn-signup {
+  border: 1px solid black;
+  padding: 6px;
+  border-radius: 5px;
+}
+
+.btn-signin {
+  margin-right: 1rem;
+}
