@@ -2,6 +2,7 @@ import "./style.css";
 import { useNavigate } from "react-router-dom";
 import setinhaVoltar from "../../assets/setinhaVoltar.svg";
 import imagemAbraço from '../../assets/imagemAbraço.svg';
+import ActionButton from '../../components/ActionButton';
 
 function SobreNos () {
   let navigate = useNavigate();
@@ -24,11 +25,9 @@ function SobreNos () {
                 </p>
             </div>
             <div className="btn-cadastrar">
-                <button className="btn-cadastro">Cadastrar-se</button>
+                < ActionButton onClick={() => navigate("/signup")}> Se cadastre clicando aqui </ActionButton>
             </div>
         </div>
-
-        <footer className="area para empresa">botão para empresa</footer>
     </div>
   );
 }

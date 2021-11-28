@@ -1,0 +1,10 @@
+.action-btn {
+  background-color: #934172;
+  border-radius: 100px;
+  padding: 10px 22px;
+  color: #ffffff;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
