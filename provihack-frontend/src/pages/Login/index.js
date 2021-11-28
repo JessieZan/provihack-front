@@ -14,13 +14,13 @@ function Login() {
   };
 
   const [loginValues, setLoginValues] = useState({ email: "", senha: "" });
-  const [validError, setError] = useState(false);
+  const [validError, setValidError] = useState(false);
   const [textError, setTextError] = useState("");
 
   useEffect(() => {
     if (loginValues.email || loginValues.senha) {
       setTextError("");
-      return setError(false);
+      return setValidError(false);
     }
   }, [loginValues.email, loginValues.senha]);
 
@@ -33,7 +33,7 @@ function Login() {
 
     if (!loginValues.email || !loginValues.senha) {
       setTextError("Campos Obrigatórios");
-      return setError(true);
+      return setValidError(true);
     }
 
     try {
@@ -51,8 +51,10 @@ function Login() {
       const data = await response.json();
 
       if (!response.ok) {
-        setError(true);
+        setValidError(true);
         setTextError(data);
+      } else {
+        console.log(data);
       }
     } catch (error) {
       console.log(error.message);
@@ -95,6 +97,7 @@ function Login() {
           onChange={(e) => handleValues(e)}
           error={validError}
           helperText={textError}
+          type="password"
           sx={{ mb: "11px" }}
           id="input-with-icon-textfield"
           label="Senha"

@@ -3,9 +3,8 @@ import Box from '@mui/material/Box'
 import Card from '@mui/material/Card'
 import CardActions from '@mui/material/CardActions'
 import CardContent from '@mui/material/CardContent'
-import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
-import './style.css'
+import Button from '../ActionButton'
 
 const bull = (
   <Box
@@ -16,24 +15,25 @@ const bull = (
   </Box>
 )
 
-export default function BasicCard({ item }) {
+export default function BasicCard({ titulo, categoria }) {
   return (
     <Card sx={{ minWidth: 275 }}>
       <CardContent>
-        <Typography className="title" gutterBottom>
-          {item.nome}
+        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+          {titulo}
         </Typography>
 
         <Typography sx={{ mb: 1.5 }} color="text.secondary">
-          {item.area}
+          Converse com alguém da área
         </Typography>
         <Typography variant="body2">
-          {item.resumo}
+          Conheça profissionais e empresas que apoiam a causa LGBTQIA+ e a
+          comunidade Trans.
           <br />
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Learn More</Button>
+        <Button>Saiba mais</Button>
       </CardActions>
     </Card>
   )
