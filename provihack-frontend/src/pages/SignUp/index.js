@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import InputMask from 'react-input-mask';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import arrowLeft from './assets/arrowLeft.svg';
 import './style.css';
 import userIcon from './assets/user.svg';
@@ -8,35 +8,56 @@ import atSign from './assets/at-sign.svg';
 import phoneIcon from './assets/phone.svg';
 import lockIcon from './assets/lock.svg';
 import ActionButton from '../../components/ActionButton';
+import errors from './validacao';
 
 const SignUp = () => {
   const navigate = useNavigate();
-
   const [form, setForm] = useState({
-    name: '',
+    nome: '',
     email: '',
-    password: '',
-    phone: '',
+    senha: '',
+    telefone: '',
   });
+
+  const [confirmSenha, setConfirmSenha] = useState('');
+
+  const [erro, setErro] = useState('');
 
   const handleChange = ({ target }) => {
     setForm({ ...form, [target.id]: target.value });
   };
 
+  useEffect(() => {
+    setErro(errors(form.nome, form.email, form.senha, confirmSenha));
+  }, [form]);
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const response = await fetch('');
+    try {
+      const response = await fetch(
+        `https://api-provihack-equipe05.herokuapp.com/cadastro`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(form),
+        }
+      );
 
-    if (response.ok) {
-      navigate('');
+      if (response.ok) {
+        navigate('/login');
+      }
+    } catch (error) {
+      console.log(error.message);
     }
   };
 
   return (
     <div className='container-signup'>
       <div className='arrow-and-title'>
-        <button className='arrow-left'>
+        <button onClick={() => navigate('/login')} className='arrow-left'>
           <img src={arrowLeft} alt='' />
         </button>
         <p>Cadastro de Usuário</p>
@@ -46,12 +67,13 @@ const SignUp = () => {
         <div>
           <img className='userIcon' src={userIcon} alt='' />
           <input
-            id='name'
+            id='nome'
             type='text'
             placeholder='Nome Social Completo'
             onChange={(event) => handleChange(event)}
             value={form.name}
           />
+          {erro === 'nome' && <span>Nome é um campo obrigatório.</span>}
         </div>
         <div>
           <img src={atSign} alt='' />
@@ -62,11 +84,12 @@ const SignUp = () => {
             onChange={(event) => handleChange(event)}
             value={form.email}
           />
+          {erro === 'email' && <span>Email é um campo obrigatório.</span>}
         </div>
         <div>
           <img src={phoneIcon} alt='' />
           <InputMask
-            id='phone'
+            id='telefone'
             mask='(99)99999-9999'
             type='text'
             placeholder='Telefone'
@@ -77,13 +100,17 @@ const SignUp = () => {
         <div>
           <img src={lockIcon} alt='' />
           <input
-            id='password'
+            id='senha'
             type='password'
             placeholder='Senha'
             onChange={(event) => handleChange(event)}
             value={form.password}
           />
-          <span>Sua senha deve conter no mínimo 5 caracteres</span>
+          {erro === 'senha' && (
+            <span>
+              Senha é um campo obrigatório e deve ter mais que 5 caracteres.
+            </span>
+          )}
         </div>
         <div>
           <img src={lockIcon} alt='' />
@@ -91,9 +118,10 @@ const SignUp = () => {
             id='password'
             type='password'
             placeholder='Confirmar senha'
-            onChange={(event) => handleChange(event)}
-            value={form.password}
+            onChange={(event) => setConfirmSenha(event.target.value)}
+            value={confirmSenha}
           />
+          {erro === 'confirm senha' && <span>As senhas não coincidem.</span>}
         </div>
         <div />
 
