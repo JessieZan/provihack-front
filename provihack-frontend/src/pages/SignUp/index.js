@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 import InputMask from 'react-input-mask';
 import { useNavigate } from 'react-router-dom';
-import arrowLeft from './assets/arrowLeft.svg';
-import './style.css';
-import userIcon from './assets/user.svg';
-import atSign from './assets/at-sign.svg';
-import phoneIcon from './assets/phone.svg';
-import lockIcon from './assets/lock.svg';
 import ActionButton from '../../components/ActionButton';
+import arrowLeft from './assets/arrowLeft.svg';
+import atSign from './assets/at-sign.svg';
+import lockIcon from './assets/lock.svg';
+import phoneIcon from './assets/phone.svg';
+import userIcon from './assets/user.svg';
+import './style.css';
 import errors from './validacao';
 
 const SignUp = () => {
