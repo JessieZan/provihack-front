@@ -12,6 +12,7 @@ import SignUp from './pages/SignUp';
 import { GlobalProvider } from './contexts/GlobalContext';
 import useGlobal from './hooks/useGlobal';
 import SearchResults from './pages/SearchResults';
+import SobreNos from './pages/SobreNos'
 
 function MainRoutes() {
   function ProtectedRoutes(props) {
@@ -25,6 +26,7 @@ function MainRoutes() {
         <Route path='/' element={<Welcome />} />
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<SignUp />} />
+        <Route path="/sobreNos" element={<SobreNos />} />
         <Route
           path='/search'
           element={
