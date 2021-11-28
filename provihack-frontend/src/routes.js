@@ -5,27 +5,28 @@ import {
   Routes,
   Switch,
   Redirect,
-} from 'react-router-dom'
-import Welcome from './pages/Welcome'
-import Login from './pages/Login'
-import SignUp from './pages/SignUp'
-import AuthProvider from './contexts/AuthContext/AuthProvider'
-import useAuthProvider from './hooks/useAuthProvider'
-import SearchResults from './pages/SearchResults'
+} from 'react-router-dom';
+import Welcome from './pages/Welcome';
+import Login from './pages/Login';
+import SignUp from './pages/SignUp';
+import { GlobalProvider } from './contexts/GlobalContext';
+import useGlobal from './hooks/useGlobal';
+import SearchResults from './pages/SearchResults';
 
 function MainRoutes() {
   function ProtectedRoutes(props) {
-    const token = useAuthProvider()
-    return token ? props.children : <Navigate to="/login" />
+    const { token } = useGlobal();
+
+    return token ? props.children : <Navigate to='/login' />;
   }
   return (
-    <AuthProvider>
+    <GlobalProvider>
       <Routes>
-        <Route path="/" element={<Welcome />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<SignUp />} />
+        <Route path='/' element={<Welcome />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/signup' element={<SignUp />} />
         <Route
-          path="/search"
+          path='/search'
           element={
             <ProtectedRoutes>
               <SearchResults />
@@ -33,8 +34,8 @@ function MainRoutes() {
           }
         />
       </Routes>
-    </AuthProvider>
-  )
+    </GlobalProvider>
+  );
 }
 
-export default MainRoutes
+export default MainRoutes;
