@@ -1,0 +1,47 @@
+.results {
+  all: unset;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background: linear-gradient(171.97deg, #FFFFFF -1.24%, #F9B4D7 53.38%, #B7D7F9 89.14%);
+  box-sizing: border-box;
+}
+
+.header {
+  font-size: 2.2rem;
+  line-height: 2.8rem;
+  text-align: center;
+  color: #1F1A1C;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100vw;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  color: #3C0029;
+  width: 20rem;
+}
+
+.titulo {
+  font-weight: 500;
+}
+
+.cards {
+  display: flex;
+  min-height: 20rem;
+  width: 100vw;
+  overflow:auto;
+  overflow-y:hidden;
+  gap: 1rem;
+  margin-left: 2rem;
+}
+
+
+
