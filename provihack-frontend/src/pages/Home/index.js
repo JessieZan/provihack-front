@@ -8,6 +8,8 @@ import getServices from "../../utils/getServices";
 import { useEffect } from "react";
 import useGlobal from "../../hooks/useGlobal";
 import { motion } from "framer-motion";
+import homeImage from "./assets/homeImage.svg";
+import ActionButton from "../../components/ActionButton";
 
 function Results({ id, nome, areas, categoria }) {
   useEffect(() => {
@@ -17,6 +19,7 @@ function Results({ id, nome, areas, categoria }) {
     }
     getData();
   }, []);
+
   const variants = {
     hidden: { opacity: 0.2 },
     visible: { opacity: 1 },
@@ -50,9 +53,17 @@ function Results({ id, nome, areas, categoria }) {
         <div className="content">
           <h2 className="titulo">Projeto TRANScender</h2>
           <span>
-            Rede de apoio a pessoas trans na capacitação para o mercado de
+            Rede de apoio a pessoas trans na qualificação para o mercado de
             trabalho.
           </span>
+        </div>
+        <img className="home-image" src={homeImage} alt="" />
+        <p>
+          Aqui você pode encontrar serviços de mentoria, cursos, assessoria
+          jurídica e apoio psicológico.
+        </p>
+        <div className="welcome-title">
+          <h2>Legal te ver por aqui! Escolha uma trilha:</h2>
         </div>
         <div className="cards">
           <CardHome titulo="Mentorias" categoria="mentorias" />
