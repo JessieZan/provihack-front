@@ -1,0 +1,25 @@
+.login {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.inputs-login {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.inputs-login label {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn_login {
+  border: 1px solid black;
+  padding: 6px;
+  border-radius: 5px;
+}
