@@ -29,6 +29,7 @@ const SignUp = () => {
 
   useEffect(() => {
     setErro(errors(form.nome, form.email, form.senha, confirmSenha));
+    //eslint-disable-next-line
   }, [form]);
 
   const handleSubmit = async (event) => {
