@@ -4,7 +4,12 @@
   display: flex;
   flex-direction: column;
 }
-.container-signup .arrow-and-title {
+.arrow-left {
+  position: absolute;
+  top: 4rem;
+  left: 1rem;
+}
+.container-signup .signup-title {
   display: flex;
   width: 15.2rem;
   height: 7.2rem;
@@ -14,19 +19,18 @@
   line-height: 3.6rem;
   color: #191c1d;
   gap: 1.7rem;
-  margin-left: 10px;
-  margin-top: 20px;
+  margin-top: 3rem;
 }
-.container-signup .arrow-and-title p {
-  margin-top: 20px;
-}
+
 .container-signup form {
   align-self: center;
   display: flex;
   flex-direction: column;
   width: 28rem;
   gap: 2rem;
-  margin-top: 45px;
+}
+.container-signup form button {
+  align-self: center;
 }
 .container-signup form input {
   all: unset;
@@ -40,7 +44,7 @@
 .container-signup form div {
   position: relative;
 }
-.container-signup .userIcon {
+.container-signup .user-icon {
   position: absolute;
   left: 1.5rem;
   top: 1.5rem;
@@ -51,12 +55,22 @@
   left: 1.5rem;
 }
 .container-signup form div span {
+  position: absolute;
   font-family: 'Roboto', sans-serif;
   font-size: 1.2rem;
   line-height: 1.6rem;
-  display: flex;
-  align-items: center;
   letter-spacing: 0.4px;
   color: rgb(214, 19, 58);
-  margin-top: 0.3rem;
+  bottom: -1.6rem;
+  left: 0;
+}
+
+@media (max-width: 1800px) {
+  .container-signup {
+    align-items: center;
+    justify-content: center;
+  }
+  .container-signup .arrow-left {
+    left: 3.7rem;
+  }
 }
