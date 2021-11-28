@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import InputMask from 'react-input-mask';
 import { Link, useNavigate } from 'react-router-dom';
+import arrowLeft from './assets/arrowLeft.svg';
 import './style.css';
 
 const SignUp = () => {
@@ -29,6 +30,9 @@ const SignUp = () => {
 
   return (
     <div className='container-signup'>
+      <button className='arrow-left'>
+        <img src={arrowLeft} alt='' />
+      </button>
       <h1>Cadastre-se</h1>
       <form onSubmit={handleSubmit} action='submit'>
         <input
