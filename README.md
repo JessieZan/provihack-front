@@ -5,11 +5,13 @@ Repositorio contendo o codigo de front desenvolvido pela equipe 05 do Provihack 
 
 - React
 
-- Tela boas vindas
+### Páginas
+
+- boas vindas
 - Cadastro de usuários 
 - Login de usuários 
-- Tela home
-- Tela serviços (a depender do que foi escolhido)
+- Home
+- Serviços (a depender do que foi escolhido)
 
 ### Cadastro du usuário
 
