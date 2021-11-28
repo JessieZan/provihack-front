@@ -57,16 +57,16 @@ const SignUp = () => {
 
   return (
     <div className='container-signup'>
-      <div className='arrow-and-title'>
-        <button onClick={() => navigate('/login')} className='arrow-left'>
-          <img src={arrowLeft} alt='' />
-        </button>
-        <p>Cadastro de Usuário</p>
-      </div>
+      <button onClick={() => navigate('/login')} className='arrow-left'>
+        <img src={arrowLeft} alt='' />
+      </button>
 
       <form onSubmit={handleSubmit} action='submit'>
+        <div className='signup-title'>
+          <p>Cadastro de Usuário</p>
+        </div>
         <div>
-          <img className='userIcon' src={userIcon} alt='' />
+          <img className='user-icon' src={userIcon} alt='' />
           <input
             id='nome'
             type='text'
@@ -107,11 +107,7 @@ const SignUp = () => {
             onChange={(event) => handleChange(event)}
             value={form.password}
           />
-          {erro === 'senha' && (
-            <span>
-              Senha é um campo obrigatório e deve ter mais que 5 caracteres.
-            </span>
-          )}
+          {erro === 'senha' && <span>Senha é um campo obrigatório.</span>}
         </div>
         <div>
           <img src={lockIcon} alt='' />
