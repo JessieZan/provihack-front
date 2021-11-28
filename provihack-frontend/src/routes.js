@@ -17,8 +17,9 @@ function MainRoutes() {
     <GlobalProvider>
       <Routes>
         <Route path="/" element={<Login />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/sobreNos" element={<SobreNos />} />
+        <Route path="/aboutUs" element={<SobreNos />} />
         <Route
           path="/home"
           element={
@@ -27,14 +28,40 @@ function MainRoutes() {
             </ProtectedRoutes>
           }
         />
-        <Route
-          path="/search"
-          element={
-            <ProtectedRoutes>
-              <SearchResults />
-            </ProtectedRoutes>
-          }
-        />
+        <Route path="/search">
+          <Route
+            path="mentorias"
+            element={
+              <ProtectedRoutes>
+                <SearchResults />
+              </ProtectedRoutes>
+            }
+          />
+          <Route
+            path="cursos"
+            element={
+              <ProtectedRoutes>
+                <SearchResults />
+              </ProtectedRoutes>
+            }
+          />
+          <Route
+            path="psicologico"
+            element={
+              <ProtectedRoutes>
+                <SearchResults />
+              </ProtectedRoutes>
+            }
+          />
+          <Route
+            path="juridico"
+            element={
+              <ProtectedRoutes>
+                <SearchResults />
+              </ProtectedRoutes>
+            }
+          />
+        </Route>
       </Routes>
     </GlobalProvider>
   );

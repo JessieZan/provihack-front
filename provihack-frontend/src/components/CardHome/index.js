@@ -1,21 +1,43 @@
-import * as React from 'react'
-import Box from '@mui/material/Box'
-import Card from '@mui/material/Card'
-import CardActions from '@mui/material/CardActions'
-import CardContent from '@mui/material/CardContent'
-import Typography from '@mui/material/Typography'
-import Button from '../ActionButton'
-
-const bull = (
-  <Box
-    component="span"
-    sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
-  >
-    •
-  </Box>
-)
+import * as React from "react";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import Typography from "@mui/material/Typography";
+import Button from "../ActionButton";
+import { useNavigate } from "react-router";
+import useGlobal from "../../hooks/useGlobal";
 
 export default function BasicCard({ titulo, categoria }) {
+  let navigate = useNavigate();
+  let { setCategory } = useGlobal();
+
+  const handleSearchs = () => {
+    switch (titulo) {
+      case "Mentorias":
+        setCategory("mentoria");
+        navigate("/search/mentorias");
+        break;
+
+      case "Cursos":
+        setCategory("cursos");
+        navigate("/search/cursos");
+        break;
+
+      case "Apoio Psicológico":
+        setCategory("psicologico");
+        navigate("/search/psicologico");
+        break;
+
+      case "Acessoria Jurídica":
+        setCategory("juridico");
+        navigate("/search/juridico");
+        break;
+
+      default:
+        break;
+    }
+  };
+
   return (
     <Card sx={{ minWidth: 275 }}>
       <CardContent>
@@ -33,8 +55,8 @@ export default function BasicCard({ titulo, categoria }) {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button>Saiba mais</Button>
+        <Button onClick={() => handleSearchs()}>Saiba mais</Button>
       </CardActions>
     </Card>
-  )
+  );
 }

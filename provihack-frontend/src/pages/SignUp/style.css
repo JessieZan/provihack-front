@@ -1,11 +1,62 @@
-.container-signup form {
+.container-signup {
+  min-height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
-  gap: 10px;
 }
-.btn-signup {
-  border: 1px solid black;
-  padding: 6px;
-  border-radius: 5px;
+.container-signup .arrow-and-title {
+  display: flex;
+  width: 15.2rem;
+  height: 7.2rem;
+  font-weight: normal;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.5rem;
+  line-height: 3.6rem;
+  color: #191c1d;
+  gap: 1.7rem;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+.container-signup .arrow-and-title p {
+  margin-top: 20px;
+}
+.container-signup form {
   align-self: center;
+  display: flex;
+  flex-direction: column;
+  width: 28rem;
+  gap: 2rem;
+  margin-top: 45px;
+}
+.container-signup form input {
+  all: unset;
+  box-sizing: border-box;
+  width: 27.5rem;
+  height: 5.6rem;
+  border: 1px solid #80747b;
+  border-radius: 4px;
+  padding-left: 5.2rem;
+}
+.container-signup form div {
+  position: relative;
+}
+.container-signup .userIcon {
+  position: absolute;
+  left: 1.5rem;
+  top: 1.5rem;
+}
+.container-signup form div img {
+  position: absolute;
+  top: 2rem;
+  left: 1.5rem;
+}
+.container-signup form div span {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.4px;
+  color: rgb(214, 19, 58);
+  margin-top: 0.3rem;
 }

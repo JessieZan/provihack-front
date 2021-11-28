@@ -6,13 +6,16 @@ import ActionButton from "../../components/ActionButton";
 import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router";
+import useGlobal from "../../hooks/useGlobal";
 
 function Login() {
   const variants = {
     hidden: { opacity: 0.2 },
     visible: { opacity: 1 },
   };
-
+  let navigate = useNavigate();
+  const { setToken } = useGlobal();
   const [loginValues, setLoginValues] = useState({ email: "", senha: "" });
   const [validError, setValidError] = useState(false);
   const [textError, setTextError] = useState("");
@@ -54,7 +57,8 @@ function Login() {
         setValidError(true);
         setTextError(data);
       } else {
-        console.log(data);
+        setToken(data.token);
+        navigate("/home");
       }
     } catch (error) {
       console.log(error.message);
@@ -78,7 +82,6 @@ function Login() {
           error={validError}
           helperText={textError}
           sx={{ mb: "10px" }}
-          id="input-with-icon-textfield"
           label="Usuário"
           placeholder="E-mail"
           InputProps={{
@@ -99,7 +102,6 @@ function Login() {
           helperText={textError}
           type="password"
           sx={{ mb: "11px" }}
-          id="input-with-icon-textfield"
           label="Senha"
           placeholder="Senha"
           InputProps={{
@@ -109,8 +111,6 @@ function Login() {
               </InputAdornment>
             ),
           }}
-          variant="outlined"
-          multiline
         />
 
         <a href="/">Esqueci meu e-mail/senha</a>
@@ -119,7 +119,7 @@ function Login() {
         <ActionButton onClick={handleLogin}>Entrar</ActionButton>
       </form>
       <div className="footer">
-        <Link to="/signup">SOBRE NÓS</Link>
+        <Link to="/aboutUs">SOBRE NÓS</Link>
         <a href="/">Como posso contribuir com o projeto?</a>
       </div>
     </motion.div>
