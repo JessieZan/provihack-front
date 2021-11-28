@@ -4,7 +4,7 @@
   width: 100vw;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   background-color: #FFD8EB;
   box-sizing: border-box;
@@ -12,21 +12,40 @@
 
 .header {
   display: flex;
+  font-size: 2.2rem;
+  line-height: 2.8rem;
+  color: #3C0029;
+}
+
+.content {
+  box-sizing: border-box;
+  padding: 0;
+  display: flex;
   flex-direction: column;
   align-items: start;
 }
 
 .titulo {
-  font-weight: 500;
+  margin: 0;
+  font-weight: 400;
   color: #3C0029;
+  font-size: 2.5rem;
+  line-height: 4.0rem;
 }
 
-.results ul {
-  list-style: none;
-}
 
-.results li {
+.results span {
   color: #3C0029;
   margin-left: 0;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  letter-spacing: 0.25px;
+}
+
+.cards {
+  box-sizing: border-box;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 

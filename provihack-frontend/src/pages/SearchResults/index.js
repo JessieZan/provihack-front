@@ -8,16 +8,18 @@ import { Typography, List } from '@mui/material'
 function Results({ id, nome, areas, categoria }) {
   return (
     <div className="results">
+      <div className="header">{categoria}Mentorias</div>
       <ThemeProvider theme={theme}>
-        <Typography className="header" variant="h5" component="div">
-          <h2 className="titulo"> Encontre seu mentor</h2>
-          <ul>
-            <li>Encontre o {categoria} ideal.</li>
-            <li>Agende um dia e horário.</li>
-            <li>Realize o atendimento.</li>
-          </ul>
-          <h4>Pronto! Simples e grátis.</h4>
-        </Typography>
+        <div className="content">
+          <h2 className="titulo"> Encontre seu Mentor</h2>
+          <span>1. Encontre o mentor ideal.</span>
+          <span>2. Agende um dia e horário.</span>
+          <span>3. Realize o atendimento.</span>
+          <span>Pronto! Simples e grátis.</span>
+        </div>
+        <div className="cards">
+
+        </div>
 
         <Link to="/servicos/:id">
           <Card />
