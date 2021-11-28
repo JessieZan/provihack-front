@@ -14,6 +14,8 @@
   line-height: 3.6rem;
   color: #191c1d;
   gap: 1.7rem;
+  margin-left: 10px;
+  margin-top: 20px;
 }
 .container-signup .arrow-and-title p {
   margin-top: 20px;
@@ -24,7 +26,7 @@
   flex-direction: column;
   width: 28rem;
   gap: 2rem;
-  margin-top: 35px;
+  margin-top: 45px;
 }
 .container-signup form input {
   all: unset;
