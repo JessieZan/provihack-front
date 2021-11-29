@@ -18,7 +18,7 @@ const bull = (
 
 export default function BasicCard({ item }) {
   return (
-    <Card sx={{ minWidth: 275 }}>
+    <Card sx={{ minWidth: 275, borderRadius: '2rem' }}>
       <CardContent>
         <Typography className="title" gutterBottom>
           {item.nome}
@@ -33,7 +33,7 @@ export default function BasicCard({ item }) {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Learn More</Button>
+        <Button>Entrar em contato</Button>
       </CardActions>
     </Card>
   )
