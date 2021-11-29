@@ -4,7 +4,7 @@ import Card from '@mui/material/Card'
 import CardActions from '@mui/material/CardActions'
 import CardContent from '@mui/material/CardContent'
 import Button from '@mui/material/Button'
-import Typography from '@mui/material/Typography'
+import { Typography, List, Avatar } from '@mui/material'
 import './style.css'
 
 const bull = (
@@ -18,22 +18,24 @@ const bull = (
 
 export default function BasicCard({ item }) {
   return (
-    <Card sx={{ minWidth: 275 }}>
-      <CardContent>
-        <Typography className="title" gutterBottom>
-          {item.nome}
-        </Typography>
+    <Card sx={{ minWidth: 300, borderRadius: '2rem' }}>
+      <CardContent className="cardContent">
+        <div>
+          <Typography className="title" gutterBottom>
+            nome
+          </Typography>
+        </div>
 
         <Typography sx={{ mb: 1.5 }} color="text.secondary">
-          {item.area}
+          area
         </Typography>
         <Typography variant="body2">
-          {item.resumo}
+          resumo
           <br />
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Learn More</Button>
+        <Button size="small">Entre em contato</Button>
       </CardActions>
     </Card>
   )
