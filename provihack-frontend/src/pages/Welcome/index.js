@@ -1,11 +1,22 @@
 import "./style.css";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 function Welcome() {
   let navigate = useNavigate();
 
+  const variants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
+
   return (
-    <div className="body_welcome">
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={variants}
+      className="body_welcome"
+    >
       <header className="header-welcome">Algo aqui</header>
 
       <div className="principal">
@@ -20,7 +31,7 @@ function Welcome() {
       </div>
 
       <footer className="footer-welcome">botão para empresa</footer>
-    </div>
+    </motion.div>
   );
 }
 

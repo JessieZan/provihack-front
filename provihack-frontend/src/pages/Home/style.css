@@ -1,0 +1,97 @@
+.results {
+  all: unset;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background: linear-gradient(
+    171.97deg,
+    #ffffff -1.24%,
+    #f9b4d7 53.38%,
+    #b7d7f9 89.14%
+  );
+  box-sizing: border-box;
+}
+
+.header {
+  font-size: 2.2rem;
+  line-height: 2.8rem;
+  text-align: center;
+  color: #1f1a1c;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100vw;
+  margin-top: 17rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  color: #3c0029;
+  width: 29rem;
+}
+.content h2 {
+  align-self: flex-start;
+  width: 10rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 3.2rem;
+  line-height: 4rem;
+  margin-top: 2rem;
+  color: #3c0029;
+}
+.content span,
+.results p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  color: #1f1a1c;
+}
+.home-image {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.titulo {
+  font-weight: 500;
+}
+.results p {
+  align-self: center;
+  margin-left: 1rem;
+  width: 32rem;
+}
+.welcome-title {
+  width: 32rem;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-self: flex-start;
+  margin-left: 4rem;
+  margin-bottom: 2rem;
+}
+
+.welcome-title h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  font-size: 2.2rem;
+  line-height: 2.8rem;
+  display: flex;
+  align-items: center;
+  color: #3c0029;
+  width: 25rem;
+  margin-top: 2rem;
+  align-self: flex-start;
+}
+
+.cards {
+  display: flex;
+  min-height: 20rem;
+  width: 100vw;
+  overflow: auto;
+  overflow-y: hidden;
+  gap: 1rem;
+  margin-left: 4rem;
+  margin-bottom: 2rem;
+}

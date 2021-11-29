@@ -1,0 +1,76 @@
+.container-signup {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+.arrow-left {
+  position: absolute;
+  top: 4rem;
+  left: 1rem;
+}
+.container-signup .signup-title {
+  display: flex;
+  width: 15.2rem;
+  height: 7.2rem;
+  font-weight: normal;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.5rem;
+  line-height: 3.6rem;
+  color: #191c1d;
+  gap: 1.7rem;
+  margin-top: 3rem;
+}
+
+.container-signup form {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  width: 28rem;
+  gap: 2rem;
+}
+.container-signup form button {
+  align-self: center;
+}
+.container-signup form input {
+  all: unset;
+  box-sizing: border-box;
+  width: 27.5rem;
+  height: 5.6rem;
+  border: 1px solid #80747b;
+  border-radius: 4px;
+  padding-left: 5.2rem;
+}
+.container-signup form div {
+  position: relative;
+}
+.container-signup .user-icon {
+  position: absolute;
+  left: 1.5rem;
+  top: 1.5rem;
+}
+.container-signup form div img {
+  position: absolute;
+  top: 2rem;
+  left: 1.5rem;
+}
+.container-signup form div span {
+  position: absolute;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  letter-spacing: 0.4px;
+  color: rgb(214, 19, 58);
+  bottom: -1.6rem;
+  left: 0;
+}
+
+@media (max-width: 1800px) {
+  .container-signup {
+    align-items: center;
+    justify-content: center;
+  }
+  .container-signup .arrow-left {
+    left: 3.7rem;
+  }
+}

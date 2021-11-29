@@ -1,0 +1,58 @@
+.resultados {
+  all: unset;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: #FFD8EB;
+  box-sizing: border-box;
+  font-family: 'Roboto';
+  margin-top: 5rem;
+}
+
+.cabecalho {
+  font-size: 2.2rem;
+  line-height: 2.8rem;
+  text-align: center;
+  color: #1F1A1C;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100vw;
+  margin: 3rem 0 ;
+}
+
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  color: #3C0029;
+  width: 25rem;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+
+}
+
+.titulo {
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.titulo1{
+margin-top: 10rem;
+}
+
+.cardes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 20rem;
+  width: 100vw;
+  overflow:auto;
+  overflow-y:hidden;
+  gap: 1rem;
+  margin-left: 2rem;
+}
