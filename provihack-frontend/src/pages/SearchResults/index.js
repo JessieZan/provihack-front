@@ -1,5 +1,4 @@
 import './style.css';
-import { Link } from 'react-router-dom';
 import Card from '../../components/Card';
 import getServices from '../../utils/getServices';
 import { useEffect } from 'react';
