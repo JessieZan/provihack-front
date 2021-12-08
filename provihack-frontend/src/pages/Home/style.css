@@ -1,6 +1,6 @@
 .results {
-  all: unset;
   min-height: 100vh;
+  margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -14,6 +14,10 @@
   box-sizing: border-box;
 }
 
+.home {
+  height: 100vh;
+}
+
 .header {
   font-size: 2.2rem;
   line-height: 2.8rem;
@@ -23,7 +27,7 @@
   align-items: center;
   justify-content: space-around;
   width: 100vw;
-  margin-top: 17rem;
+  margin-top: 1.8rem;
 }
 
 .content {
@@ -92,6 +96,21 @@
   overflow: auto;
   overflow-y: hidden;
   gap: 1rem;
-  margin-left: 4rem;
+  margin-left: 4rem; 
+  margin-bottom: 2rem;
+}
+
+.cardsPartners {
+  display: flex;
+  min-height: 20rem;
+  width: 100vw;
+  overflow: auto;
+  overflow-y: hidden;
+  gap: 1rem;
+  margin-left: 4rem; 
+  margin-bottom: 2rem;
+}
+
+p {
   margin-bottom: 2rem;
 }
