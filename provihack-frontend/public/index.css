@@ -24,6 +24,25 @@
 
   border: 4.5px solid #fbfdfd;
   border-radius: 5px;
+  
+}
+
+.box-text {
+  width: 16rem;
+  height: 16.2rem;
+
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 5.7rem;
+  line-height: 4rem;
+
+  display: flex;
+  flex-direction: column;
+  letter-spacing: -0.02em;
+  font-feature-settings: "pnum" on, "lnum" on;
+
+  color: #fbfdfd;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -39,22 +58,4 @@
   to {
     transform: scale(1.5);
   }
-}
-
-.box-text {
-  width: 16rem;
-  height: 16.2rem;
-
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 5.7rem;
-  line-height: 40px;
-
-  display: flex;
-  flex-direction: column;
-  letter-spacing: -0.02em;
-  font-feature-settings: "pnum" on, "lnum" on;
-
-  color: #fbfdfd;
 }
