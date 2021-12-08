@@ -100,7 +100,7 @@ function Results({ id, nome, areas, categoria }) {
           <h2>Algum problema? Nos avise!</h2>
         </div>
         <Button>Reportar problema</Button>
-        <SecondaryButton>Preciso de ajuda!  </SecondaryButton>
+        <SecondaryButton>Preciso de ajuda! </SecondaryButton>
       </motion.div>
     </div>
   )

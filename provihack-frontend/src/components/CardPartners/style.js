@@ -42,20 +42,6 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: '0.2px',
     color: '#1F1A1C',
   },
-
-  tabs: {
-    [theme.breakpoints.up('xs')]: {
-      backgroundColor: '#F0F0F5',
-      paddingTop: '1rem',
-      minWidth: '3rem',
-    },
-    [theme.breakpoints.down('xs')]: {
-      width: '6rem',
-      height: '25rem',
-      position: 'absolute',
-      opacity: '0.9',
-    },
-  },
 }))
 
 export default useStyles

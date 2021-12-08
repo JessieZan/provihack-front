@@ -1,6 +1,5 @@
 .resultados {
-  all: unset;
-  min-height: 100vh;
+  height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -9,7 +8,6 @@
   background: #ffd8eb;
   box-sizing: border-box;
   font-family: 'Roboto';
-  margin-top: 5rem;
 }
 
 .cabecalho {
@@ -21,7 +19,6 @@
   align-items: center;
   justify-content: space-around;
   width: 100vw;
-  margin: 3rem 0;
 }
 
 .conteudo {
@@ -41,7 +38,7 @@
 
 .titulo1 {
   align-self: flex-start;
-  margin-top: 10rem;
+  margin-top: 2rem;
   margin-left: 6rem;
 }
 .titulo1 button {
@@ -53,10 +50,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 20rem;
   width: 100vw;
-  overflow: auto;
-  overflow-y: hidden;
   gap: 1rem;
   margin-left: 2rem;
+  background: #ffd8eb;
 }
